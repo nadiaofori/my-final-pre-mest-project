@@ -12,10 +12,10 @@
 
     router.post("/login", async (request, response) =>{
         // console.log(request.body);
-        const {username, password} = request.body
-        console.log(username);
+        const {email, password} = request.body
+        console.log(email);
         // let userModel = new usermodel()
-        let responseData = await usermodel.findOne({username})
+        let responseData = await usermodel.findOne({email})
         if (responseData) {
             
         
